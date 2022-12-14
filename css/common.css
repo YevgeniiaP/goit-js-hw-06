@@ -22,3 +22,15 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+/* Task 3 styles */
+.newArrayList {
+  list-style-type: none;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newArrayImg {
+  width: 320px;
+}
