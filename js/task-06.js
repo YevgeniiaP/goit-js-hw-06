@@ -1,9 +1,18 @@
 const textInput = document.querySelector("#validation-input");
+let validLength = Number(textInput.dataset.length);
 
-const inputValidation = (event) => {
-    textOutput.textContent = event.currentTarget.value
-        ? event.currentTarget.value
-        : "Anonymous";
+function validationCheck(event) {
+
+  if (event.currentTarget.value.length === validLength) {
+    event.currentTarget.classList.remove('invalid');
+    event.currentTarget.classList.add('valid');
+  }
+    else {
+        event.currentTarget.classList.remove('valid');
+        event.currentTarget.classList.add('invalid');
+    };
 };
 
-textInput.addEventListener('blur', inputValidation);
+textInput.addEventListener("blur", validationCheck);
+
+
